@@ -1,0 +1,146 @@
+.portfolioContainer{
+	padding: 52px 0;
+	width: min(1180px,90%);
+	margin: auto;
+}
+
+.portfolioTitle{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 640px;
+	margin-bottom: 46px;
+}
+.portfolioTag{
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-family: 'IBM Plex Mono',monospace;
+	font-size: 13px;
+	color: var(--indigo);
+	background: rgba(88,80,236,.08);
+	padding: 6px 14px;
+	border-radius: 8px;
+	letter-spacing: .3px;
+}
+.portfolioTitle h2{
+	margin-top: 16px;
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: -.5px;
+}
+
+.portfolioFilter{
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+	margin-bottom: 46px;
+	flex-wrap: wrap;
+}
+.portfolioFilter button{
+	padding: 11px 22px;
+	background: var(--surface);
+	border: 1px solid var(--line);
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--ink-2);
+	transition: .25s;
+}
+.portfolioFilter button:hover{
+	background: var(--grad);
+	color: white;
+	border-color: transparent;
+}
+.filterActive{
+	background: var(--grad);
+	color: white;
+	border-color: transparent;
+}
+
+.portfolioGrid{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+	gap: 26px;
+}
+
+.project{
+	background: var(--surface);
+	border-radius: 18px;
+	overflow: hidden;
+	border: 1px solid var(--line);
+	transition: .35s;
+}
+.project:hover{
+	transform: translateY(-8px);
+	box-shadow: var(--shadow);
+}
+
+.projectBar{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 14px;
+	background: var(--surface-2);
+	border-bottom: 1px solid var(--line);
+}
+.projectDots{
+	display: flex;
+	gap: 6px;
+}
+.projectDots span{
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: #D8DBE5;
+}
+.projectAddress{
+	flex: 1;
+	background: var(--surface);
+	border-radius: 8px;
+	padding: 5px 10px;
+	font-family: 'IBM Plex Mono',monospace;
+	font-size: 11.5px;
+	color: var(--ink-2);
+}
+
+.projectThumb{
+	height: 150px;
+	background: var(--surface-2);
+	position: relative;
+	overflow: hidden;
+}
+.projectImage{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+.projectThumb::before{
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: var(--grad);
+	opacity: .12;
+}
+
+.projectContent{
+	padding: 26px;
+}
+.projectContent h3{
+	font-size: 19px;
+	margin-bottom: 8px;
+	font-weight: 700;
+}
+.projectContent p{
+	font-family: 'IBM Plex Mono',monospace;
+	color: var(--ink-2);
+	font-size: 13px;
+	margin-bottom: 16px;
+}
+.projectContent a{
+	color: var(--indigo);
+	font-weight: 700;
+	font-size: 14px;
+}

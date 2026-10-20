@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background: rgba(246,247,251,.75);
+	backdrop-filter: blur(14px);
+	border-bottom: 1px solid var(--line);
+}
+
+.headerContainer {
+	margin: 0 auto;
+	width: min(1180px, 90%);
+	height: 82px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.headerLogo{
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.headerLogoItem {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 17px;
+	border-radius: 12px;
+	font-weight: 500;
+	width: 44px;
+	height: 44px;
+	flex-shrink: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	white-space: nowrap;
+	color: white;
+	background: var(--grad);
+}
+.headerLogoSDC{
+	font-family: 'Space Grotesk',sans-serif;
+	color: var(--ink);
+	font-size: 25px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+.headerLogoSDC .headerLogoDot{
+	color: var(--indigo);
+}
+
+.headerNavElements {
+	display: flex;
+}
+.headerNavMenu {
+	display: flex;
+	gap: 4px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.headerNavMenu a {
+	position: relative;
+	display: inline-block;
+	color: var(--ink);
+	font-weight: 700;
+	font-size: 13.5px;
+	padding: 9px 11px;
+	border-radius: 9px;
+	transition: .25s;
+}
+.headerNavMenu a::after{
+	content: "";
+	position: absolute;
+	left: 11px;
+	right: 11px;
+	bottom: 5px;
+	height: 2px;
+	border-radius: 2px;
+	background: var(--grad);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform .25s ease;
+}
+.headerNavMenu a:hover{
+	background: rgba(88,80,236,.07);
+	color: var(--indigo);
+}
+.headerNavMenu a:hover::after{
+	transform: scaleX(1);
+}
+
+.headerUserLog {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	font-size: 13px;
+	font-family: 'IBM Plex Mono', monospace;
+	color: var(--ink-2);
+}
+
+.headerUserAcc{
+	display: inline-block;
+	padding: 13px 26px;
+	border-radius: 12px;
+	border: 1px solid var(--line);
+	font-weight: 600;
+	font-size: 14.5px;
+	transition: .3s;
+	background: var(--surface);
+	color: var(--ink);
+	font-family: 'Space Grotesk',sans-serif;
+	text-decoration: none;
+}
+.headerUserAcc:hover{
+	border-color: var(--indigo);
+}
+
+@media(max-width: 1000px){
+	.headerNavElements{
+		display: none;
+	}
+}

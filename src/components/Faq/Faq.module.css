@@ -1,0 +1,73 @@
+.faqContainer{
+	padding: 52px 0;
+	width: min(1180px,90%);
+	margin: auto;
+}
+
+.faqTitle{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 640px;
+	margin-bottom: 28px;
+}
+.faqTag{
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-family: 'IBM Plex Mono',monospace;
+	font-size: 13px;
+	color: var(--indigo);
+	background: rgba(88,80,236,.08);
+	padding: 6px 14px;
+	border-radius: 8px;
+	letter-spacing: .3px;
+}
+.faqTitle h2{
+	margin-top: 16px;
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: -.5px;
+}
+
+.faqList{
+	max-width: 780px;
+	margin: 0 auto;
+}
+
+.question{
+	background: var(--surface);
+	padding: 24px 26px;
+	margin-bottom: 14px;
+	border-radius: 14px;
+	border: 1px solid var(--line);
+	cursor: pointer;
+	transition: .25s;
+}
+.question:hover{
+	border-color: var(--indigo);
+}
+.questionHead{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.question h3{
+	font-size: 16px;
+	font-weight: 700;
+}
+.question p{
+	margin-top: 14px;
+	color: var(--ink-2);
+	line-height: 1.75;
+	font-size: 14.5px;
+}
+.plus{
+	font-family: 'IBM Plex Mono',monospace;
+	color: var(--indigo);
+	font-size: 18px;
+	transition: .25s;
+}
+.questionOpen .plus{
+	transform: rotate(45deg);
+}

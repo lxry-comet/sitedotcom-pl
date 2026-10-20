@@ -1,11 +1,18 @@
-import { defineConfig } from 'vite';
-import { glob } from 'glob';
-import injectHTML from 'vite-plugin-html-inject';
-import FullReload from 'vite-plugin-full-reload';
+import { glob } from 'glob'
+import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vite'
+import FullReload from 'vite-plugin-full-reload'
+import injectHTML from 'vite-plugin-html-inject'
 
 export default defineConfig({
-  base: '/react-vite_templates/',
+  base: '/sitedotcom.pl/',
   root: 'src',
+  publicDir: '../public',
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
   build: {
     rollupOptions: {
       input: glob.sync('./src/**/*.html'),

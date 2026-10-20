@@ -1,0 +1,60 @@
+.resultsContainer{
+	padding: 52px 0;
+	width: min(1180px,90%);
+	margin: auto;
+}
+
+.resultsTitle{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 640px;
+	margin-bottom: 28px;
+}
+.resultsTag{
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-family: 'IBM Plex Mono',monospace;
+	font-size: 13px;
+	color: var(--indigo);
+	background: rgba(88,80,236,.08);
+	padding: 6px 14px;
+	border-radius: 8px;
+	letter-spacing: .3px;
+}
+.resultsTitle h2{
+	margin-top: 16px;
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: -.5px;
+}
+
+.resultsGrid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 22px;
+	text-align: center;
+	max-width: 520px;
+	margin: 0 auto;
+}
+.resultsStat{
+	background: var(--surface);
+	padding: 36px 20px;
+	border-radius: 16px;
+	border: 1px solid var(--line);
+}
+.resultsCount{
+	font-size: 36px;
+	font-weight: 700;
+	font-family: 'Space Grotesk',sans-serif;
+	background: var(--grad);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+.resultsStat p{
+	margin-top: 8px;
+	color: var(--ink-2);
+	font-size: 14px;
+}

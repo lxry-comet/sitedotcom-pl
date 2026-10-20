@@ -1,0 +1,230 @@
+.heroSection{
+	min-height: calc(100vh - 82px);
+	display: flex;
+	align-items: center;
+	gap: 70px;
+	padding-top: 96px;
+	padding-bottom: 52px;
+}
+.heroContainer{
+	width: min(1180px,90%);
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 70px;
+}
+.heroAside{
+	flex: 1;
+}
+.heroTag{
+	margin-bottom: 22px;
+
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-family: 'IBM Plex Mono',monospace;
+	font-size: 13px;
+	color: var(--indigo);
+	background: rgba(88,80,236,.08);
+	padding: 6px 14px;
+	border-radius: 8px;
+	letter-spacing: .3px;
+}
+.heroTitle{
+	font-family: 'Space Grotesk',sans-serif;
+	font-size: 54px;
+	line-height: 1.12;
+	font-weight: 700;
+	letter-spacing: -1px;
+	max-width: 620px;
+}
+.headerTitleGrad{
+	font-family: var(--family-spaceGrotesk);
+	background: var(--grad);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+.heroTiteDescription{
+	margin-top: 24px;
+	font-size: 17px;
+	line-height: 1.75;
+	color: var(--ink-2);
+	max-width: 520px;
+}
+.heroButtons{
+	display: flex;
+	gap: 16px;
+	margin-top: 36px;
+}
+.heroButtonStartProj{
+	display: inline-block;
+	padding: 13px 26px;
+	border-radius: 12px;
+	border: none;
+	background: var(--grad);
+	color: white;
+	font-weight: 600;
+	font-size: 14.5px;
+	transition: .3s;
+	font-family: 'Space Grotesk',sans-serif;
+	text-decoration: none;
+}
+.heroButtonStartProj:hover{
+	transform: translateY(-2px);
+	box-shadow: 0 12px 30px -8px rgba(88,80,236,.5);
+}
+.heroButtonPortfolio{
+	display: inline-block;
+	padding: 13px 26px;
+	border-radius: 12px;
+	font-weight: 600;
+
+	background: var(--surface);
+	color: var(--ink);
+	border: 1px solid var(--line);
+
+	font-family: 'Space Grotesk',sans-serif;
+	transition: .3s;
+	text-decoration: none;
+}
+.heroButtonPortfolio:hover{
+	border-color: var(--indigo);
+}
+.heroStats{
+	display: flex;
+	gap: 44px;
+	margin-top: 56px;
+}
+.heroStats div h2{
+	font-size: 30px;
+	font-weight: 700;
+	font-family: 'Space Grotesk',sans-serif;
+}
+.heroStats div p{
+	margin-top: 6px;
+	color: var(--ink-2);
+	font-size: 13.5px;
+}
+.heroBrowser{
+	width: 100%;
+	max-width: 530px;
+	flex-shrink: 0;
+	background: var(--surface);
+	border-radius: 20px;
+	border: 1px solid var(--line);
+	box-shadow: var(--shadow);
+	overflow: hidden;
+	animation: float 7s ease-in-out infinite;
+}
+@keyframes float{
+	50%{ transform: translateY(-14px); }
+}
+.heroBrowserBar{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 14px 18px;
+	background: var(--surface-2);
+	border-bottom: 1px solid var(--line);
+}
+.browser-dots {
+	display: flex;
+	gap: 6px;
+}
+.browser-dots span {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #D8DBE5;
+}
+.browser-address {
+	flex: 1;
+	background: var(--surface);
+	border-radius: 8px;
+	padding: 7px 14px;
+	font-family: 'IBM Plex Mono',monospace;
+	font-size: 13px;
+	color: var(--ink-2);
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+.browser-address .caret {
+	display: inline-block;
+	width: 7px;
+	height: 15px;
+	background: var(--indigo);
+	animation: blink-caret 1s step-end infinite;
+}
+.heroBrowserBody{
+	padding: 32px 28px;
+}
+.b-nav {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 28px;
+}
+.b-nav span {
+	width: 34px;
+}
+.b-line {
+	height: 12px;
+	border-radius: 6px;
+	background: var(--surface-2);
+}
+.b-hero-title {
+	width: 78%;
+	height: 20px;
+	margin-bottom: 12px;
+}
+.b-hero-sub {
+	width: 55%;
+	margin-bottom: 22px;
+}
+.b-btn {
+	width: 130px;
+	height: 34px;
+	border-radius: 9px;
+	background: var(--grad);
+	margin-bottom: 26px;
+}
+.b-grid {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 12px;
+}
+.b-card {
+	height: 70px;
+	border-radius: 10px;
+	background: var(--surface-2);
+	border: 1px solid var(--line);
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	50% { opacity: 0; }
+}
+
+@media(max-width: 1000px){
+	.heroSection{
+		padding-top: 112px;
+	}
+	.heroContainer{
+		flex-direction: column;
+		text-align: center;
+	}
+	.heroTitle{
+		font-size: 40px;
+		max-width: 100%;
+	}
+	.heroTiteDescription{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.heroButtons,
+	.heroStats{
+		justify-content: center;
+	}
+}

@@ -1,0 +1,138 @@
+.servicesContainer{
+	padding: 52px 0;
+	width: min(1180px,90%);
+	margin: auto;
+}
+
+.servicesTitle{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 640px;
+	margin-bottom: 28px;
+}
+.servicesTag{
+	display: inline-flex;
+	align-items: center;
+	text-align: center;
+	gap: 6px;
+	font-family: 'IBM Plex Mono',monospace;
+	font-size: 13px;
+	color: var(--indigo);
+	background: rgba(88,80,236,.08);
+	padding: 6px 14px;
+	border-radius: 8px;
+	letter-spacing: .3px;
+}
+.servicesTitle p {
+	margin-top: 16px;
+	color: var(--ink-2);
+	line-height: 1.8;
+	font-size: 15.5px;
+}
+
+/* grid of service cards */
+.servicesCard{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 26px;
+	align-items: start;
+}
+
+/* individual card — hover/focus reveals servicesMore */
+.servicesList{
+	background: var(--surface);
+	padding: 34px;
+	border-radius: 18px;
+	border: 1px solid var(--line);
+	outline: none;
+	transition: .3s;
+}
+.servicesList:hover,
+.servicesList:focus-within{
+	transform: translateY(-6px);
+	border-color: var(--indigo);
+	box-shadow: var(--shadow);
+}
+.servicesList h3{
+	font-size: 20px;
+	margin-bottom: 14px;
+	font-weight: 700;
+}
+.servicesList > p{
+	color: var(--ink-2);
+	line-height: 1.75;
+	font-size: 14.5px;
+}
+
+/* expanding "more" panel */
+.servicesMore{
+	display: grid;
+	grid-template-rows: 0fr;
+	opacity: 0;
+	transition: grid-template-rows .4s cubic-bezier(.2,.7,.2,1), opacity .3s ease;
+}
+.servicesList:hover .servicesMore,
+.servicesList:focus-within .servicesMore{
+	grid-template-rows: 1fr;
+	opacity: 1;
+}
+.servicesMoreInner{
+	overflow: hidden;
+}
+.servicesMoreContent{
+	margin-top: 18px;
+	padding-top: 18px;
+	border-top: 1px solid var(--line);
+}
+
+.servicesListDescription{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.servicesListDescription li{
+	position: relative;
+	padding-left: 18px;
+	color: var(--ink-2);
+	font-size: 14px;
+	line-height: 1.6;
+}
+.servicesListDescription li::before{
+	content: "›";
+	position: absolute;
+	left: 0;
+	top: -1px;
+	color: var(--indigo);
+	font-weight: 700;
+}
+
+.servicesMeta{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 18px;
+}
+.servicesMeta span{
+	font-family: 'IBM Plex Mono',monospace;
+	font-size: 12px;
+	color: var(--indigo);
+	background: rgba(88,80,236,.08);
+	padding: 5px 10px;
+	border-radius: 7px;
+}
+
+@media(max-width: 1000px){
+	.servicesCard{
+		grid-template-columns: 1fr;
+	}
+}
+
+@media(max-width: 640px){
+	.servicesList{
+		padding: 26px;
+	}
+}

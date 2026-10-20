@@ -1,0 +1,77 @@
+footer{
+	border-top: 1px solid var(--line);
+}
+
+.footerContainer{
+	padding: 52px 0;
+	width: min(1180px,90%);
+	margin: auto;
+
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 1fr;
+	gap: 40px;
+}
+
+.footerLogo{
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 25px;
+	font-weight: 700;
+}
+.footerLogoItem{
+	width: 44px;
+	height: 44px;
+	border-radius: 12px;
+	flex-shrink: 0;
+	background: var(--grad);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-family: 'IBM Plex Mono',monospace;
+	font-weight: 500;
+	font-size: 17px;
+}
+.footerLogoSDC{
+	font-family: 'Space Grotesk',sans-serif;
+}
+.footerLogoDot{
+	color: var(--indigo);
+}
+.footerAbout p{
+	color: var(--ink-2);
+	line-height: 1.75;
+	margin-top: 18px;
+	font-size: 14px;
+}
+
+.footerContainer h3{
+	margin-bottom: 18px;
+	font-size: 14.5px;
+}
+.footerContainer a{
+	display: block;
+	margin-bottom: 12px;
+	color: var(--ink-2);
+	font-size: 14px;
+	transition: .25s;
+}
+.footerContainer a:hover{
+	color: var(--indigo);
+	padding-left: 4px;
+}
+
+.copyright{
+	text-align: center;
+	padding: 26px;
+	border-top: 1px solid var(--line);
+	color: var(--ink-2);
+	font-size: 13px;
+}
+
+@media(max-width: 1000px){
+	.footerContainer{
+		grid-template-columns: 1fr;
+	}
+}
