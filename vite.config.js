@@ -5,7 +5,7 @@ import FullReload from 'vite-plugin-full-reload'
 import injectHTML from 'vite-plugin-html-inject'
 
 export default defineConfig({
-  base: '/sitedotcom.pl/',
+ base: '/',
   root: 'src',
   publicDir: '../public',
   resolve: {

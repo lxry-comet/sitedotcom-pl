@@ -5,11 +5,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build --base=/sitedotcom.pl/",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
+     "dev": "vite",
+  "build": "vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
